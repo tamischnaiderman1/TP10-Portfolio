@@ -8,14 +8,14 @@ export default function App() {
   return (
     <div className="App">
       <h1>Contact Us</h1>
-      <Formik
+      <Formik style={styles.container}
         initialValues={{ name: "", email: "" }}
         onSubmit={async (values) => {
           await new Promise((resolve) => setTimeout(resolve, 500));
           alert(JSON.stringify(values, null, 2));
         }}
       >
-        <Form>
+        <Form style={styles.text}>
           <Field name="name" type="text" />
           <Field name="email" type="email" />
           <button type="submit">Submit</button>
@@ -37,10 +37,5 @@ const styles = StyleSheet.create({
       fontWeight: "bold",
       paddingBottom: 10,
     },
-    App: {
-        fontSize: 30,
-      fontWeight: "bold",
-      color: "red",
-      },
   });
 
