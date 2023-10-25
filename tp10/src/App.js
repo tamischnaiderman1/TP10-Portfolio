@@ -1,18 +1,32 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import Login from "./src/components/login.js";
-import Contacto from "./src/components/Contacto.js";
-import Home from "./src/components/Home.js";
-import { ContextProvider } from "./src/contextState.js";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Contacto from "./Contacto.js";
+import Home from "./Home.js";
+import Layout from "./Layout.js";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import Creaciones from "./Creaciones.js";
+import { MyContext } from "./MyContext.js";
 
-const Stack = createNativeStackNavigator();
+
 
 export default function App() {
+  const [m, setM] = useState([]);
+
   return (
-    <ContextProvider>
-      <NavigationContainer>
+    <MyContext.Provider value={{ m, setM }}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/layout" element={<Layout />}>
+            <Route path="/home" element={<Home />}></Route>
+            <Route path="/contacto" element={<Contacto />}></Route>
+            <Route path="*" element={<h1>404</h1>}></Route>
+            <Route path="/Creaciones" element={<Creaciones />}></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter >
+      </MyContext.Provider>
+  );
+}
+{/*<NavigationContainer>
         <Stack.Navigator>
         <Stack.Screen
             name="Contacto"
@@ -26,11 +40,7 @@ export default function App() {
           />
           
         </Stack.Navigator>
-      </NavigationContainer>
-      <StatusBar style="auto" />
-    </ContextProvider>
-  );
-}
+  </NavigationContainer>*/}
 
 const styles = StyleSheet.create({
   container: {
