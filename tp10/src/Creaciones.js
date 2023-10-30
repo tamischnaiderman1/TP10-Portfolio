@@ -7,7 +7,6 @@ export default function Creaciones() {
   const [favoritos, setFavoritos] = useState([]);
 
   useEffect(() => {
-    // Cambia la ruta a tu archivo JSON local
     axios.get('/TP10-Portfolio/creaciones.json')
       .then(response => {
         setCreaciones(response.data);
