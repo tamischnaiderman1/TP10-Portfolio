@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Detalle from './Detalle';
 
 export default function Creaciones() {
   const [creaciones, setCreaciones] = useState([]);

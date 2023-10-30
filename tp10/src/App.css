@@ -1,3 +1,18 @@
+
+.container {
+  flex: 1;
+  background-color: "#fff";
+  align-items: "center";
+  justify-content: "center";
+}
+.text{
+  font-size: 30;
+  font-weight: "bold";
+  padding-bottom: 10;
+}
+
+
+
 .App {
   text-align: center;
 }
@@ -30,9 +45,9 @@
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    transhtmlForm: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transhtmlForm: rotate(360deg);
   }
 }

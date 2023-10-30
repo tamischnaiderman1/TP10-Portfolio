@@ -1,17 +1,31 @@
 import React from 'react';
+import { Link, Outlet } from "react-router-dom";
 
 
-export default function Layout({ children }) {
-
+const Layout = () => {
   return (
-    <div className="app-container">
-      <header />
-      <main>{children}</main>
-      {/* Puedes agregar un footer u otros elementos del layout aquí */}
-      <header />
-      <menu />
-      <main>{children}</main>
-      <footer />
-    </div>
+    <>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/home">Home</Link>
+          </li>
+          <li>
+            <Link to="/busqueda"> Busqueda</Link>
+          </li>
+          <li>
+            <Link to="/creaciones"> Creaciones</Link>
+          </li>
+          <li>
+            <Link to="/Contacto"> Contacto</Link>
+          </li>
+        </ul>
+      </nav>
+      <Outlet />
+
+    </>
+
   );
-}
+
+};
+export default Layout
