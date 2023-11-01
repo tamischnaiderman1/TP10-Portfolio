@@ -4,32 +4,26 @@ import './Layout.css'
 
 const Layout = () => {
   return (
-    <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/home"><button>
-                 Home
-                </button></Link>
-          </li>
-          <br/>
-          <li>
-            <Link to="/busqueda"> <button>Busqueda</button></Link>
-          </li>
-          <br/>
-          <li>
-            <Link to="/creaciones"> <button>Creaciones</button></Link>
-          </li>
-          <br/>
-          <li>
-            <Link to="/Contacto"> <button>Contacto</button></Link>
-          </li>
-          <br/>
-        </ul>
-      </nav>
-      <Outlet />
+      <>
+          <nav>
+              <ul>
+                  <li>
+                      <Link to="/">Home</Link>
+                  </li>
+                  <li>
+                      <Link to="/busqueda"> Busqueda</Link>
+                  </li>
+                  <li>
+                    <Link to="/creaciones"> Creaciones</Link>
+                  </li>
+                  <li>
+                  <Link to="/Contacto">  Contacto</Link>
+                  </li>
+              </ul>
+          </nav>
+          <Outlet />
 
-    </>
+      </>
 
   );
 
