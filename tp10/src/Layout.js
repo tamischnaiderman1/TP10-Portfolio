@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, Outlet } from "react-router-dom";
 import './Layout.css'
 
-const Layout = () => {
+const Layout = () => {{/*
   return (
       <>
           <nav>
@@ -25,7 +25,7 @@ const Layout = () => {
 
       </>
 
-  );
+  );*/}
 
 };
 export default Layout

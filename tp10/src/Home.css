@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+body {
+  background-color: #dbcfe9;  
+}
+
 .cards {
   display: grid;
   justify-content: center;

@@ -3,6 +3,7 @@ import { Carousel } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import { useAPI } from "./apiContext";
+import './Home.css';
 
 export default function Home() {
   const { cartas } = useAPI();
@@ -17,10 +18,10 @@ export default function Home() {
           showThumbs={false}
         >
           <div>
-            <img src="https://i.ytimg.com/vi/TX9qSaGXFyg/maxresdefault.jpg" />
+            <img src="" />
           </div>
           <div>
-            <img src="https://www.ventasrosario.com.ar/wp-content/uploads/2023/01/40-nc-alum-starlight-sport-band-starlight.jpg" />
+            <img src="" />
           </div>
         </Carousel>
       
