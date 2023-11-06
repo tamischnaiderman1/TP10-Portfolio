@@ -2,6 +2,7 @@
   background-color:  #dbcfe9;
   align-items: "center";
   justify-content: "center";
+
 }
 .text{
   font-size: 30;
@@ -102,3 +103,8 @@
 }
 
 
+.App{
+  align-items: "center";
+  justify-content: "center";
+
+}
